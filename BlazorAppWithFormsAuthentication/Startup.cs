@@ -48,7 +48,7 @@ namespace BlazorAppWithFormsAuthentication
             var application_name = Configuration["ApplicationName"];
             var domain_name = Configuration["DomainName"];
             services.AddDataProtection()
-                .ProtectKeysWithDpapi().DisableAutomaticKeyGeneration()
+                .ProtectKeysWithDpapi()
                 .PersistKeysToFileSystem(new System.IO.DirectoryInfo(shared_key_location))
                 .SetApplicationName(application_name);
 
